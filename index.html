@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leonard & Jovith Wedding Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff8f0;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: #f7dada;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin: 0;
+    }
+    h2 {
+      margin-top: 10px;
+      font-weight: 400;
+    }
+    .details {
+      margin: 30px auto;
+      max-width: 600px;
+      font-size: 1.2em;
+    }
+    .countdown {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    iframe {
+      border: 0;
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      margin: 20px auto;
+    }
+    .rsvp-btn {
+      background: #e67373;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      font-size: 1em;
+      margin-top: 30px;
+      cursor: pointer;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Leonard & Jovith</h1>
+  <h2>We're Getting Married!</h2>
+  <img src="C:\Users\leona\Documents\Prenup\DSC02536.JPG" alt="Leonard & Jovith Wedding" style="max-width: 300px; width: 80%; border-radius: 16px; margin-top: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <div class="countdown" id="countdown"></div>
+</header>
+
+<div class="details">
+  <p>📍 Santo Niño de Molino Church</p>
+  <p>📅 September 6, 2025 | 2:00 PM</p>
+
+  <h3>Join us in celebrating our love and commitment 💍</h3>
+
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!..." 
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
+
+  <a class="rsvp-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd8v15SMHPDp46F-r0qYImG6JDGO-SngPkdcGOEzF3Y5Me5HQ/viewform?usp=sharing&ouid=115619125580570990102" target="_blank">RSVP Now</a>
+</div>
+
+<div class="footer">
+  With love, Leonard and Jovith
+</div>
+
+<script>
+  // Countdown Timer
+  const countdown = () => {
+    const weddingDate = new Date("2025-12-14T16:00:00").getTime();
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerText = "We're Married!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("countdown").innerText = `${days} days to go`;
+  };
+
+  countdown();
+  setInterval(countdown, 86400000); // update daily
+</script>
+
+</body>
+</html>
